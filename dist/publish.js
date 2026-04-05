@@ -32,10 +32,15 @@ export async function publishScore(score, options) {
             signal: controller.signal,
         });
         clearTimeout(timeout);
+        if (!res.ok) {
+            const body = await res.text().catch(() => "");
+            console.error(`[sevo-score] publish failed (${res.status}): ${body.slice(0, 200)}`);
+        }
         return res.ok;
     }
-    catch {
-        // Silent failure — never interrupt evolution
+    catch (err) {
+        const msg = err instanceof Error ? err.message : String(err);
+        console.error(`[sevo-score] publish failed: ${msg}`);
         return false;
     }
 }
