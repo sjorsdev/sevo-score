@@ -1,4 +1,5 @@
 export { computeSevoScore } from "./score.js";
+export { publishScore, type PublishOptions } from "./publish.js";
 export { computeCyclePoints, type EventCounts } from "./compute.js";
 export { detectForkPoint, createForkFilter, type GraphReader, type GitReader } from "./graph-reader.js";
 export { POINTS } from "./points.js";

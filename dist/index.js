@@ -12,6 +12,7 @@
 // Every SEVO project must use this package. Do not redefine these types.
 // Scoring
 export { computeSevoScore } from "./score.js";
+export { publishScore } from "./publish.js";
 export { computeCyclePoints } from "./compute.js";
 export { detectForkPoint, createForkFilter } from "./graph-reader.js";
 export { POINTS } from "./points.js";
