@@ -1,6 +1,6 @@
 {
   "name": "sevo-score",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "SevoScore — canonical scoring for SEVO evolution projects",
   "type": "module",
   "main": "./dist/index.js",
